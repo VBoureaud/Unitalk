@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="Unitalk Team">
+      <title> Unitalk Demo </title>
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+      <link rel="stylesheet" href="css/creative.css" type="text/css">
+      <link rel="stylesheet" href="css/unitalk.css" type="text/css">
+  </head>
+  <body>
+    <div id="content">
+         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="icon-bottom">
+                        <i class="tuto fa fa-arrow-down"></i>
+                    </button>
+
+                    <a class="navbar-brand page-scroll" href="#">Unitalk</a>
+                </div>
+            </div>
+        </nav>
+        <section class="landing-container">
+          <div class="col-sm-6 nopadding" id="canvas">
+          <img id="p0" class="pictogrammes" src="img/Headache.png">
+          <img id="p1" class="pictogrammes" src="img/Temperature.png">
+          <img id="p2" class="pictogrammes" src="img/Cold.png">
+          <img id="p3" class="pictogrammes" src="img/Puke.png">
+          <img id="loader" class="loader" width="100px" height="100px" src="img/loader.gif">
+          <span class="loader" id="loader-result" style="text-align: center;">0%</span>
+          </div>
+          <div class="col-sm-6 chat-container">
+            <div id="api-content" class="chat-content">
+              <div id="head-content">
+                <h1>Unitalk Vocal</h1><hr/>
+                <span id="activated-api"></span><br/><br/>
+              </div>
+              <div id="separator">
+              <div id="content-textarea">
+                <a id="launch" onclick="checkState();launchProcess();" class="btn-primary btn-xl page-scroll"><i class="fa fa-microphone"></i></a>
+                <span class="btn-angle-red"></span>
+                <textarea id="result-field"></textarea><br/><br/>
+                <a id="launchText" onclick="checkState();launchText();" class="btn-secondary btn-xl page-scroll"><i class="fa fa-paper-plane"></i></a>
+                <span class="btn-angle-darkcyan"></span>
+              </div>
+            </div>
+            <div class="button_demo">
+              <h3>Options</h3>
+              <form>
+               <div class="radio-group">
+                  <input type="radio" id="humanModel" name="selector" checked><label for="humanModel">Masculin</label><input type="radio" id="womanModel" name="selector"><label for="womanModel">Feminin</label><input type="radio" id="muscleModel" name="selector"><label for="muscleModel">Muscle</label><input type="radio" id="squeletteModel" name="selector"><label for="squeletteModel">Squelette</label>
+                </div>
+              </form>
+              <form>
+               <div class="radio-group radio-organes" id="organesRadio">
+                  <input type="radio" id="organeNotVisible" name="selector" checked><label for="organeNotVisible">Organes non visibles</label><input type="radio" id="organeVisible" name="selector"><label for="organeVisible">Organes visibles</label>
+                </div>
+              </form>
+              <div class="btn-secondary btn-xl page-scroll" id="tutoriel_button">Tutoriel</div>
+            </div>
+          </div>
+        </section>
+    </div>
+    <script>
+       document.getElementsByClassName('icon-bottom')[0].addEventListener("click", function(){
+          if (parseInt(window.scrollY)  > 0){
+            window.scrollTo(document.body.scrollHeight,0);
+            this.style.transform = "rotate(0deg)";
+          }
+          else {
+            window.scrollTo(0,document.body.scrollHeight);
+           this.style.transform = "rotate(180deg)";
+          }
+        });
+        window.addEventListener('scroll', function(){
+        if (parseInt(window.scrollY) == 0){
+          document.getElementsByClassName('icon-bottom')[0].style.transform = "rotate(0deg)";
+        }
+        else if (parseInt(window.scrollY) > 0){
+          document.getElementsByClassName('icon-bottom')[0].style.transform = "rotate(180deg)";
+        }
+      });
+    </script>
+    <script src="js/body_parts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/90/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/pictograms.js" type="text/javascript"></script>
+    <script src="js/tutoriel.js" type="text/javascript"></script>
+    <script src="js/human.js" type="text/javascript"></script>
+    <script src="js/VoiceToText.js" type="text/javascript"></script>
+  </body>
+</html>

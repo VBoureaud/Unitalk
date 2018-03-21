@@ -1,0 +1,271 @@
+.nopadding {
+    padding: 0;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+#result-field {
+    max-width: 464px;
+    height: 119px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    padding-right: 70px;
+    resize: none;
+}
+
+.pictogrammes {
+    display: block;
+    margin-top: 3%;
+    opacity: 0;
+}
+
+.navbar-default {
+    background: #232323;
+}
+
+/* NEW */
+#cursor {
+    position: absolute;
+    z-index: 1;
+}
+
+.landing-container {
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+}
+
+#canvas {
+    background: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    position: fixed;
+    left:0;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -50px;
+}
+
+.chat-container {
+    position: absolute;
+    right: 0;
+}
+
+.chat-container:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.chat-content {
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 95%;
+    padding-bottom: 25px;
+    color:white;
+}
+
+.button_demo {
+    width:100%;
+    max-width: 440px;
+    margin:auto;
+    text-align: center;
+    position: relative;
+}
+.button_demo > h3 {
+    width: 100px;
+    position: relative;
+}
+
+/* TUTORIEL */
+#tutoriel_button {
+    display: block;
+    position: initial;
+    background-color: #005e8b;
+    width: 100%;
+    max-width: 437px;
+    padding-bottom: 14px;
+    border-radius: 10px;
+    float: none;
+    height: 36px;
+    padding-top: 6px;
+    margin: auto;
+}
+
+#tutoriel_msg1{
+    color:white;
+    font-size:50px;
+    opacity:0;
+    z-index: 5;
+}
+#tutoriel_filter{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Button Model */
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+label {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 20px;
+  margin: 0;
+}
+input[type=radio]:checked + label{
+  color: #ffffff;
+  background-color: #f05f40;
+  text-shadow: 1px 1px #ff0000;
+}
+label + input[type=radio] + label {
+  border-left: solid 3px #b74b36;
+}
+.radio-group {
+  border: solid 3px #b74c36;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Arial;
+  letter-spacing: 1px;
+}
+.radio-organes > label{
+    padding: 5px 33px;
+}
+.radio-organes {
+    border: solid 3px #3a3a3a;
+}
+.radio-organes input[type=radio]:checked + label {
+    background: #464646;
+    text-shadow: none;
+}
+.radio-organes label + input[type=radio] + label {
+    border-left: solid 3px #3b3b3b;
+}
+
+#head-content{
+    height: 188px;
+    position: relative;
+    top: 45px;
+}
+
+#changeModel {
+    display: inline-block;
+    padding: 14px 36px;
+    font-size: 18px;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #E74C3C;
+    text-shadow: 0px -2px #BD3E31;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    cursor: pointer;
+    width: 100%;
+    max-width: 240px;
+    text-shadow: 2px 2px #005050;
+}
+
+#changeModel:active
+{
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid #232323;
+}
+
+.loader {
+    display: block;
+    margin: auto;
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+#loader-result
+{
+    padding:27px;
+    padding-top:110px;
+}
+#result-field::-moz-selection{
+    background: #e00505;
+}
+#result-field::selection {
+    background: #e00505;
+}
+
+/* * * * */
+
+@media only screen and (max-width: 1480px) {
+
+}
+
+@media only screen and (max-width : 1310px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 985px) {
+    body {
+         overflow:initial;
+    }
+
+    .landing-container {
+        /*height: auto !important;*/
+    }
+    #tutoriel_button {
+        /* max-width: 100%; */
+    }
+    #changeModel {
+        max-width: 100%;
+    }
+    .chat-container {
+        position: initial;
+        width: 100%;
+    }
+    #canvas {
+        position:initial;
+        width:100%;
+    }
+    canvas {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    label {
+        width: 100%;
+    }
+    label + input[type=radio] + label{
+        border:none;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}
+
+@font-face {
+ font-family: "Roboto";
+ src: url("./Roboto.ttf");
+}
