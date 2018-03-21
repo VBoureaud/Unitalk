@@ -7,6 +7,8 @@ You can find in this repository the front Web version of the prototype to test w
 
 We use ThreeJS for the 3D interactions.
 
+http://valentin.boureaud.com/unitalk
+
 ## Requirements
 
 You have to launch the project with a web server.
@@ -34,7 +36,6 @@ You have to launch the project with a web server.
 │   ├── pimples.jpg
 │   ├── Puke.png
 │   └── Temperature.png
-├── index.html
 ├── js
 │   ├── body_parts.js
 │   ├── human.js
@@ -47,21 +48,22 @@ You have to launch the project with a web server.
 │   ├── muscle.json
 │   ├── squelette.json
 │   └── woman.json
+├── webfonts
+│   ├── fa-brands-400.eot
+│   ├── fa-brands-400.svg
+│   ├── fa-brands-400.ttf
+│   ├── fa-brands-400.woff
+│   ├── fa-brands-400.woff2
+│   ├── fa-regular-400.eot
+│   ├── fa-regular-400.svg
+│   ├── fa-regular-400.ttf
+│   ├── fa-regular-400.woff
+│   ├── fa-regular-400.woff2
+│   ├── fa-solid-900.eot
+│   ├── fa-solid-900.svg
+│   ├── fa-solid-900.ttf
+│   ├── fa-solid-900.woff
+│   └── fa-solid-900.woff2
 ├── README.md
-└── webfonts
-    ├── fa-brands-400.eot
-    ├── fa-brands-400.svg
-    ├── fa-brands-400.ttf
-    ├── fa-brands-400.woff
-    ├── fa-brands-400.woff2
-    ├── fa-regular-400.eot
-    ├── fa-regular-400.svg
-    ├── fa-regular-400.ttf
-    ├── fa-regular-400.woff
-    ├── fa-regular-400.woff2
-    ├── fa-solid-900.eot
-    ├── fa-solid-900.svg
-    ├── fa-solid-900.ttf
-    ├── fa-solid-900.woff
-    └── fa-solid-900.woff2
+└── index.html
 ```
